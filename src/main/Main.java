@@ -58,7 +58,7 @@ public class Main extends JFrame{
     }
 
     private Image image() {
-        return new FileImageReader("C:\\Users\\Public\\Pictures\\Sample Pictures").read();
+        return new FileImageReader("C:\\Users\\Asus\\Pictures").read();
     }
 
     private JMenuBar toolBar() {
