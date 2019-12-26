@@ -1,6 +1,6 @@
 package control;
 
-import view.ui.ImageDisplay;
+import view.ImageDisplay;
 
 public class NextImageCommand implements Command {
     private final ImageDisplay display;

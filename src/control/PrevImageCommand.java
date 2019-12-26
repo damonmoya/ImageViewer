@@ -1,6 +1,6 @@
 package control;
 
-import view.ui.ImageDisplay;
+import view.ImageDisplay;
 
 public class PrevImageCommand implements Command{
     private ImageDisplay display;
