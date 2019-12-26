@@ -1,7 +1,7 @@
 package main;
 
 import model.Image;
-import view.persistance.ImageReader;
+import view.ImageReader;
 
 import javax.imageio.ImageIO;
 import java.io.File;
