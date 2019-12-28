@@ -9,6 +9,7 @@ import java.awt.image.BufferedImage;
 public class ImagePanel extends JPanel implements view.ImageDisplay {
 
     private Image image;
+    private Graphics g;
 
     public ImagePanel(Image image) {
         this.image = image;
@@ -16,6 +17,7 @@ public class ImagePanel extends JPanel implements view.ImageDisplay {
 
     @Override
     protected void paintComponent(Graphics g) {
+        super.paintComponent(g);
         g.drawImage((BufferedImage) image.bitMap(),0,0,this);
     }
 

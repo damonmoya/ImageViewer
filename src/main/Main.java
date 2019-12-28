@@ -1,20 +1,15 @@
 package main;
 
-import control.Command;
-import control.NextImageCommand;
-import control.PrevImageCommand;
+import control.*;
 import model.Image;
 import javax.swing.*;
-import javax.swing.event.MouseInputAdapter;
 import java.awt.*;
-import java.awt.event.MouseEvent;
 import java.util.HashMap;
 import java.util.Map;
 
 public class Main extends JFrame{
     private Map<String, Command> commands = new HashMap<>();
     private ImagePanel applicationDisplayPanel;
-    private int xMousePosition;
 
     public static void main(String[] args) {
         new Main().setVisible(true);
@@ -41,18 +36,6 @@ public class Main extends JFrame{
 
     private ImagePanel imagePanel() {
         ImagePanel panel = new ImagePanel(image());
-        panel.addMouseListener(new MouseInputAdapter() {
-            @Override
-            public void mousePressed(MouseEvent e) {
-                xMousePosition = e.getX();
-            }
-
-            @Override
-            public void mouseReleased(MouseEvent e) {
-                if((xMousePosition - e.getX()) >= 0 ) commands.get("Next").execute();
-                else commands.get("Prev").execute();
-            }
-        });
         applicationDisplayPanel = panel;
         return panel;
     }

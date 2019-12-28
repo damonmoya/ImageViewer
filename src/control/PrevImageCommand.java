@@ -3,7 +3,7 @@ package control;
 import view.ImageDisplay;
 
 public class PrevImageCommand implements Command{
-    private ImageDisplay display;
+    private final ImageDisplay display;
 
     public PrevImageCommand(ImageDisplay display) {
         this.display = display;
