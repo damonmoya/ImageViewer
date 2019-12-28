@@ -12,6 +12,9 @@ public class Main extends JFrame{
     private ImagePanel applicationDisplayPanel;
 
     public static void main(String[] args) {
+        try { 
+            UIManager.setLookAndFeel("com.sun.java.swing.plaf.nimbus.NimbusLookAndFeel"); 
+        } catch(Exception ignored){}
         new Main().setVisible(true);
     }
 
@@ -28,7 +31,7 @@ public class Main extends JFrame{
     private void deployUI() {
         this.setTitle("Image Viewer");
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        this.setMinimumSize(new Dimension(500,500));
+        this.setMinimumSize(new Dimension(800,600));
         this.setLocationRelativeTo(null);
         this.getContentPane().add(imagePanel());
         this.add(toolBar(),BorderLayout.SOUTH);
